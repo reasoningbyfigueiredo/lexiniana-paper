@@ -1,0 +1,29 @@
+name: CI-Lexiniana
+on: [push, pull_request]
+jobs:
+  validate-and-plot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Prepare metrics
+        run: |
+          mkdir -p metrics
+          if [ ! -f metrics/delta_sem.csv ]; then
+            echo "timestamp,lexicon_pair,term_a,term_b,delta_sem,pass" > metrics/delta_sem.csv
+          fi
+      - name: (Opcional) Rodar validador real (substitua este passo)
+        run: |
+          echo "(plugue aqui o seu ./l4-cli validate que preenche metrics/delta_sem.csv)"
+      - name: Plot δ_sem
+        run: |
+          pip install pandas matplotlib
+          python3 scripts/plot_semantic_evolution.py || true
+      - name: Upload metrics
+        uses: actions/upload-artifact@v4
+        with:
+          name: delta-sem-artifacts
+          path: |
+            metrics/delta_sem.csv
+            metrics/delta_sem_evolution.png

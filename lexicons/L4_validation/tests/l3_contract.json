@@ -1,0 +1,35 @@
+{
+  "title": "SeedDerived",
+  "type": "object",
+  "required": [
+    "intent",
+    "confidence"
+  ],
+  "properties": {
+    "intent": {
+      "enum": [
+        "CLIENTE",
+        "PEDIDO"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "atributo_a": {
+      "type": "string"
+    },
+    "atributo_b": {
+      "type": "string"
+    }
+  },
+  "x_intent_required": {
+    "CLIENTE": [
+      "atributo_a"
+    ],
+    "PEDIDO": [
+      "atributo_b"
+    ]
+  }
+}

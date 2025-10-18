@@ -1,0 +1,18 @@
+{
+  "samples": [
+    {
+      "intent": "CLIENTE",
+      "confidence": 0.92,
+      "atributo_a": "x"
+    },
+    {
+      "intent": "PEDIDO",
+      "confidence": 0.81,
+      "atributo_b": "y"
+    },
+    {
+      "intent": "CLIENTE",
+      "confidence": 0.6
+    }
+  ]
+}

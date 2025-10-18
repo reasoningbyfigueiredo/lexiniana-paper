@@ -1,0 +1,26 @@
+name: Docs
+on:
+  push:
+    branches: [ main ]
+    paths: [ "paper/**" ]
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pandoc + LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra || true
+      - name: Build PDF
+        run: |
+          mkdir -p paper/build
+          pandoc paper/Matematica_Lexiniana_Paper.md             -V geometry:margin=2.5cm             -V mainfont="Latin Modern Roman"             --pdf-engine=pdflatex             -o paper/build/Matematica_Lexiniana_Paper.pdf
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdf
+          path: paper/build/Matematica_Lexiniana_Paper.pdf

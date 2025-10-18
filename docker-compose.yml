@@ -1,0 +1,8 @@
+services:
+  lexiniana:
+    build: .
+    image: lexiniana-toolkit:latest
+    container_name: lexiniana-toolkit
+    volumes:
+      - ./:/workspace
+    # por padrão o ENTRYPOINT do Dockerfile já chama /usr/local/bin/run_all.sh

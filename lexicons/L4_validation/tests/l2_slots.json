@@ -1,0 +1,16 @@
+{
+  "slots": [
+    {
+      "slot_name": "Classificar Cliente",
+      "maps_to": "CLIENTE"
+    },
+    {
+      "slot_name": "Classificar Pedido",
+      "maps_to": "PEDIDO"
+    }
+  ],
+  "output_schema_required": [
+    "intent",
+    "confidence"
+  ]
+}
