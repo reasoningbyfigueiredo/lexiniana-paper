@@ -4,9 +4,9 @@
 
 ## Resumo / Abstract
 **PT** A Matemática Léxiniana aplica Kuhn (paradigma, anomalia, revolução) à tradução entre L1 (cliente), L2 (prompt), L3 (código) e L4 (validador). Define-se a métrica:
-\[
+$$
 \delta_{sem}(a,b) = 1 - \cos(\text{emb}(a), \text{emb}(b))
-\]
+$$
 **EN** The framework maps L1–L4 communication and measures incomensurability with δ_sem.
 
 ## 1. Introdução / Introduction
@@ -18,9 +18,9 @@
 ## 3. Metodologia / Methodology
 Arquitetura L1 (cliente), L2 (prompt), L3 (código), L4 (validador).  
 Métrica:
-\[
+$$
 \delta_{sem}(a,b) = 1 - \cos(\text{emb}(a), \text{emb}(b))
-\]
+$$
 
 ## 4. Resultados e Discussão / Results and Discussion
 (O L4 identifica anomalias léxicas e gera RFCs conceituais.)

@@ -1,1 +1,3 @@
 timestamp,lexicon_pair,term_a,term_b,delta_sem,pass
+2025-10-20T00:43:42.451563629+00:00,L1-L2,Cliente,Classificar Cliente,0.2929,false
+2025-10-20T00:43:42.451563629+00:00,L1-L2,Pedido,Classificar Pedido,0.2929,false

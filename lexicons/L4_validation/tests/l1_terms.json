@@ -1,18 +1,6 @@
 {
-  "terms": [
-    {
-      "id": "CLIENTE",
-      "name": "Cliente",
-      "aliases": [
-        "Cliente"
-      ]
-    },
-    {
-      "id": "PEDIDO",
-      "name": "Pedido",
-      "aliases": [
-        "Pedido"
-      ]
-    }
+  "terms":[
+    {"id":"CLIENTE","name":"Cliente","aliases":["Cliente"]},
+    {"id":"PEDIDO","name":"Pedido","aliases":["Pedido"]}
   ]
 }

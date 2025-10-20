@@ -1,8 +1,15 @@
 services:
-  lexiniana:
-    build: .
-    image: lexiniana-toolkit:latest
-    container_name: lexiniana-toolkit
+  full:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lexiniana-full:latest
+    container_name: lexiniana-full
     volumes:
       - ./:/workspace
-    # por padrão o ENTRYPOINT do Dockerfile já chama /usr/local/bin/run_all.sh
+    deploy:
+      resources:
+        limits:
+          cpus: "10"
+          memory: 32G
+    profiles: ["full"]
