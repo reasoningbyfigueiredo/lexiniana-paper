@@ -1,4 +1,3 @@
-\
 # A Matemática Léxiniana: Paradigmas de Comunicação entre Léxicos no Desenvolvimento de Software
 ### *The Lexinian Mathematics: Paradigms of Communication between Lexicons in Software Development*
 
